@@ -20,7 +20,7 @@ trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
 testset = torchvision.datasets.MNIST(root='./data', train=False,
                                        download=True, transform=transform)  # Importation des échantillons de test 
 testloader = torch.utils.data.DataLoader(testset, batch_size=4,
-                                         shuffle=False, num_workers=2)      #On définit la mise en forme des données
+                                         shuffle=True, num_workers=2)      #On définit la mise en forme des données
 
 classes = ('0', '1', '2', '3',
            '4', '5', '6', '7', '8', '9')        # On définit les classes possibles pour les entrées 
